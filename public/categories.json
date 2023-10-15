@@ -1,0 +1,51 @@
+ [
+    {
+      "id": 1,
+      "image": "health.jpg",
+      "title": "Healthcare",
+      "category_name": "Health",
+      "color": "#FF5733",
+      "category_background_color": "#E64A19",
+      "category_card_background_color": "#FFCDD2",
+      "text_color": "#333333",
+      "description": "Browse our healthcare products.",
+      "price": "$100.00"
+    },
+    {
+      "id": 2,
+      "image": "https://ibb.co/k14vNN4",
+      "title": "Educational Resources",
+      "category_name": "Education",
+      "color": "#33FF57",
+      "category_background_color": "#19E64A",
+      "category_card_background_color": "#D2FFCD",
+      "text_color": "#333333",
+      "description": "Explore our educational materials.",
+      "price": "$50.00"
+    },
+    {
+      "id": 3,
+      "image": "https://ibb.co/Ny58Ypr",
+      "title": "Clothing Collection",
+      "category_name": "Cloth",
+      "color": "#5733FF",
+      "category_background_color": "#4A19E64A",
+      "category_card_background_color": "#D2CFFD",
+      "text_color": "#333333",
+      "description": "Discover the latest fashion trends.",
+      "price": "$100.00"
+    },
+    {
+      "id": 4,
+      "image": "https://ibb.co/kg9JhzJ",
+      "title": "Food & Groceries",
+      "category_name": "Food",
+      "color": "#FF5733",
+      "category_background_color": "#E64A19",
+      "category_card_background_color": "#FFCDD2",
+      "text_color": "#333333",
+      "description": "Shop for delicious food items.",
+      "price": "$50.00"
+    }
+  ]
+

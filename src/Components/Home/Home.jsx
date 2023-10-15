@@ -1,8 +1,10 @@
-import React from 'react';
+
+import Donation_categories from '../donations_categories/Donation_categories';
 
 
 
 const Home = () => {
+
   
     return (
       <div className="mt-28 ">
@@ -33,7 +35,17 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div>
+          
+
+          <Donation_categories></Donation_categories>
+          
+        </div>
+        
+       
       </div>
+      
     );
 };
 
