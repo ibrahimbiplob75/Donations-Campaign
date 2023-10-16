@@ -22,27 +22,28 @@ const Category = ({category}) => {
      };
     return (
       <div>
-        <div className="card w-96  shadow-xl " style={cardStyle}>
-          <figure>
-            <img className="w-full" src={image} alt="Shoes" />
-          </figure>
+        <Link to={`/details/${id}`}>
+          <div className="card w-96  shadow-xl " style={cardStyle}>
+            <figure>
+              <img className="w-full" src={image} alt="Shoes" />
+            </figure>
 
-          <div className="card-body">
-            <Link to={`/details/${id}`}>
+            <div className="card-body">
               <button
                 className="btn btn-outline btn-success w-1/2"
                 style={textColorStyle}
               >
                 {category_name}
               </button>
-            </Link>
-            <h2 className="card-title " style={textColorStyle}>
-              {title}
-            </h2>
 
-            <div className="card-actions justify-end"></div>
+              <h2 className="card-title " style={textColorStyle}>
+                {title}
+              </h2>
+
+              <div className="card-actions justify-end"></div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     );
 };
