@@ -1,10 +1,17 @@
 
+import { useState } from 'react';
 import Donation_categories from '../donations_categories/Donation_categories';
 
 
 
 const Home = () => {
+      const [searchTerm, setSearchTerm] = useState(""); 
 
+      
+      const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+      };
+      
   
     return (
       <div className="mt-28 ">
@@ -27,6 +34,8 @@ const Home = () => {
                   type="text"
                   placeholder="Search here...."
                   className="input input-bordered w-full pr-16 text-black"
+                  value={searchTerm}
+                  onChange={handleSearch}
                 />
                 <button className="btn btn-error text-white text-xl absolute top-0 right-0 rounded-l-none">
                   Search
@@ -37,15 +46,9 @@ const Home = () => {
         </div>
 
         <div>
-          
-
-          <Donation_categories></Donation_categories>
-          
+          <Donation_categories searchTerm={searchTerm}></Donation_categories>
         </div>
-        
-       
       </div>
-      
     );
 };
 

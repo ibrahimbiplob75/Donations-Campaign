@@ -1,27 +1,36 @@
 import Category from "../Category/Category";
 import React, { useEffect, useState } from "react";
 
-const Donation_categories = () => {
+const Donation_categories = ({searchTerm}) => {
+
+   // console.log(searchTerm)
 
     const [categories, setCategories] = useState([]);
+    const [filteredCategories, setFilteredCategories] = useState([]);
 
     useEffect(() => {
       fetch("donate.json")
         .then((res) => res.json())
-        .then((data) => setCategories(data));
-    }, []);
+        .then((data) => {
+          setCategories(data);
+          
+          if (searchTerm) {
+            const filtered = data.filter((category) =>
+              category.category_name
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase())
+            );
+            setFilteredCategories(filtered);
+          } else {
+            setFilteredCategories(data);
+          }
+        });
+    }, [searchTerm]);
  
   return (
     <div className="flex flex-wrap gap-4 m-20 justify-between">
-      {categories.map((category) => (
-        <Category
-          key={category.id}
-          category={category}
-          style={{
-            color: category.text_color,
-            backgroundColor: category.category_background_color,
-          }}
-        ></Category>
+      {filteredCategories.map((category) => (
+        <Category key={category.id} category={category}></Category>
       ))}
     </div>
   );
