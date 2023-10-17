@@ -8,7 +8,9 @@ const Donation = () => {
     const Donated=useLoaderData();
     const [donateList , setDonateList]=useState([]);
 
-
+    
+    const No_of_donate=donateList.length;
+    localStorage.setItem("Donate_length", No_of_donate);
    
     useEffect(()=>{
         const addedDonateID=getStoredDonation();
